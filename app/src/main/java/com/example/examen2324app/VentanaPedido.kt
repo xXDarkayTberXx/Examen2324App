@@ -50,6 +50,7 @@ class VentanaPedido : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        supportActionBar?.hide()
         setContentView(R.layout.activity_ventana_pedido)
         recibirExtras()
         initComponents()

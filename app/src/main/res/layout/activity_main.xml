@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cc_app_bg"
+    android:padding="18dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvNombreRestaurante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="@string/nombreRestaurante"
+        android:textColor="@color/cc_texto"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cv1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv1"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/cc_bg_elemento"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/tvIntroducirNombre"
+        app:layout_constraintEnd_toStartOf="@id/cv2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/table_svgrepo_com" />
+
+            <TextView
+                android:id="@+id/tvDosAsientos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/dosasientos"
+                android:textColor="@color/cc_texto2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/cc_bg_elemento"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/tvIntroducirNombre"
+        app:layout_constraintEnd_toStartOf="@id/cv3"
+        app:layout_constraintStart_toEndOf="@id/cv1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/table_svgrepo_com" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/cuatroasientos"
+                android:textColor="@color/cc_texto2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv3"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/cc_bg_elemento"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/tvIntroducirNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cv2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/table_svgrepo_com" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ochoasientos"
+                android:textColor="@color/cc_texto2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvIntroducirNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="@string/introducirNombre"
+        android:textColor="@color/cc_texto"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textInputNombre" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputNombre"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/cc_bg_elemento"
+        android:hint="@string/nameplaceholder"
+        android:textColor="@color/cc_texto2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnAnteriorHora"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="42dp"
+        android:background="@drawable/baseline_arrow_circle_left_24"
+        android:backgroundTint="@color/cc_texto"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cvhourSelection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cvhourSelection" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/cvhourSelection"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="1dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputNombre">
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:background="@color/cc_bg_elemento"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvHoras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/horaocho"
+                android:textColor="@color/cc_texto2"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/btnSiguienteHora"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_marginRight="42dp"
+        android:background="@drawable/baseline_arrow_circle_right_24"
+        android:backgroundTint="@color/cc_texto"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cvhourSelection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cvhourSelection" />
+
+    <ImageView
+        android:id="@+id/btnValidar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="42dp"
+        android:background="@drawable/baseline_check_circle_24"
+        android:backgroundTint="@color/cc_texto"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

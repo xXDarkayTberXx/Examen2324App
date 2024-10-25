@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Examen2324AppAlex</string>
+    <string name="nombreRestaurante">RusTaurante</string>
+    <string name="dosasientos">2 asientos</string>
+    <string name="cuatroasientos">4 asientos</string>
+    <string name="ochoasientos">8 asientos</string>
+    <string name="introducirNombre">INTRODUCE TU NOMBRE</string>
+    <string name="nameplaceholder">Name…</string>
+    <string name="horaocho">20:00</string>
+    <string name="horanueve">21:00</string>
+    <string name="horadiez">22:00</string>
+    <string name="mesareservada1">MESA RESERVADA PARA </string>
+    <string name="mesareservada2"> PERSONAS A NOMBRE DE </string>
+    <string name="mesareservada3">, A LAS  </string>
+
+</resources>

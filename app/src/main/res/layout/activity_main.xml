@@ -146,6 +146,8 @@
         android:layout_height="48dp"
         android:background="@color/cc_bg_elemento"
         android:hint="@string/nameplaceholder"
+        android:maxLines="1"
+        android:singleLine="true"
         android:textColor="@color/cc_texto2"
         android:textSize="20sp"
         android:textStyle="bold"

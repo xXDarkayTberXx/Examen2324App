@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cc_app_bg"
-    tools:context=".VentanaPedido">
+    tools:context=".VentanaPedido"
+    android:padding="18dp">
 
     <TextView
         android:id="@+id/tvVeredicto"

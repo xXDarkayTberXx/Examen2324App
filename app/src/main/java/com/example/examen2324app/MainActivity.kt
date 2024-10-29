@@ -33,23 +33,26 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnValidar: AppCompatImageView
     private lateinit var cvhourSelection: CardView
 
-    var mesaPedida: String = ""
+    private lateinit var mesaPedida: String
 
     private fun initListeners() {
         cv1.setOnClickListener {
             changeCardviewColors(cv1)
             mostrarTodo()
             mesaPedida = R.id.cv1.toString()
+            Toast.makeText(this, R.id.cv1.toString(), Toast.LENGTH_LONG).show()
         }
         cv2.setOnClickListener {
             changeCardviewColors(cv2)
             mostrarTodo()
             mesaPedida = R.id.cv2.toString()
+            Toast.makeText(this, R.id.cv2.toString(), Toast.LENGTH_LONG).show()
         }
         cv3.setOnClickListener {
             changeCardviewColors(cv3)
             mostrarTodo()
             mesaPedida = R.id.cv3.toString()
+            Toast.makeText(this, R.id.cv3.toString(), Toast.LENGTH_LONG).show()
         }
         btnAnteriorHora.setOnClickListener {
             reduceHour()
@@ -82,12 +85,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun mandarNumAsientos(intentPED: Intent) {
-        if (mesaPedida == "cv1") {
-            intentPED.putExtra("NUM_ASIENTOS", " 2 ")
-        } else if (mesaPedida == "cv2") {
-            intentPED.putExtra("NUM_ASIENTOS", " 4 ")
-        } else {
-            intentPED.putExtra("NUM_ASIENTOS", " 8 ")
+        when (mesaPedida) {
+            R.id.cv1.toString() ->  intentPED.putExtra("NUM_ASIENTOS", " 2 ")
+            R.id.cv2.toString() -> intentPED.putExtra("NUM_ASIENTOS", " 4 ")
+            else -> intentPED.putExtra("NUM_ASIENTOS", " 8 ")
         }
     }
 

@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity() {
     private fun validarPedido() {
         val intentPED = Intent(this, VentanaPedido::class.java)
         intentPED.putExtra("HORA_PEDIDO", " " + tvHoras.text.toString() + " ")
-        validarNombreNoVacio(intentPED)
         mandarNumAsientos(intentPED)
         if (validarNombreNoVacio(intentPED)){
             startActivity(intentPED)
